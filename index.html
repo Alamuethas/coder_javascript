@@ -27,22 +27,17 @@
             <form>
                 <fieldset>
                     <p>ingrese sus datos</p>
-                    <input id="nombre" type="text" placeholder="nombre">
-                    <input id="apellido" type="text" placeholder="apellido">
-                    <input id="edad" type="text" placeholder="edad">
-                    <label>Sintomas</label>
+                    <input id="nombre" type="text" placeholder="nombre" required>
+                    <input id="apellido" type="text" placeholder="apellido" required>
+                    <input id="edad" type="text" placeholder="edad" required>
+                    <br>
                     <br>
                     <p>ingrese sus Sintomas</p>
-                    <input class="sintoma" type="radio" name="Dolor de garganta"> Dolor de garganta
-                    <input class="sintoma" type="radio" name="Tos"> Tos
-                    <input class="sintoma" type="radio" name="Fiebre"> Fiebre
-                    <input class="sintoma" type="radio" name="Dolor muscular"> Dolor muscular
-                    <input class="sintoma" type="radio" name="Cansancio"> Cansancio
-                    <input class="sintoma" type="radio" name="Mucosidad"> Mucosidad
+                    <textarea id="sintomatologia" rows="4" cols="50" placeholder="sintomatologia" required> </textarea>
                     <br>
                     <button type="button" onclick="ingreso();" class="btn btn-primary">Enviar</button>
-                    <button type="button" onclick="traerEnfermo();" class="btn btn-primary">Traer Primer
-                        Enfermo</button>
+<!--                     <button type="button" onclick="traerEnfermo();" class="btn btn-primary">Traer Primer
+                        Enfermo</button> -->
                     <button type="button" onclick="traerMismoApellido();" class="btn btn-primary">Traer Mismo
                         Apellido</button>
                 </fieldset>
