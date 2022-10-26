@@ -60,7 +60,7 @@ const traerMismoApellido = () => {
     console.log(mismoApellido)
 }
 
-const handleClickBtn = (nombre, qr) => {
+const handleClickBtn = (qr) => {
     QR_BODY = document.getElementById("qr");
     QR_BODY.innerHTML = `<img src="${qr}" alt="" srcset="">`
 }
@@ -74,11 +74,11 @@ const crearHtml = () => {
             const btn = document.createElement("div")
             btn.innerHTML = '<a href="" id="boton_qr" data-bs-toggle="modal" data-bs-target="#idmodalqr" class="btn btn-secondary">Ver tu QR</a>'
             btn.addEventListener('click', () => {
-                handleClickBtn(paciente.nombre, paciente.qr)
+                handleClickBtn(paciente.qr)
             }, false);
             const li = document.createElement("li");
             li.textContent =
-                `nombre ${JSON.stringify(paciente.nombre)} , apellido${JSON.stringify(paciente.apellido)} , sintomas :${JSON.stringify(paciente.sintomatologia)}`
+                `nombre ${JSON.stringify(paciente.nombre)} , apellido ${JSON.stringify(paciente.apellido)}`
             listaLi.appendChild(li);
             listaLi.appendChild(btn);
         })
